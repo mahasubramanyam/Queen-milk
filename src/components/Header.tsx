@@ -13,18 +13,18 @@ export const Header: React.FC = () => {
   ];
 
   return (
-    <header id="main-header" className="sticky top-0 z-40 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E6DED8] transition-all">
+    <header id="main-header" className="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b border-[#EEEEEE] transition-all">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-3.5 flex items-center justify-between">
         {/* Shop Name & Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-10 h-10 rounded-lg bg-[#B85D38] text-[#FAF7F2] flex items-center justify-center font-heading text-xl font-bold shadow-xs transition-transform group-hover:scale-105">
+          <div className="w-10 h-10 rounded-lg bg-[#5B8C51] text-white flex items-center justify-center font-heading text-xl font-bold shadow-xs transition-transform group-hover:scale-105">
             Q
           </div>
           <div>
-            <span className="block font-heading text-lg sm:text-xl font-bold tracking-tight text-[#2C2523] leading-tight">
+            <span className="block font-heading text-lg sm:text-xl font-bold tracking-tight text-[#404A3D] leading-tight">
               {BUSINESS_INFO.name}
             </span>
-            <span className="block text-[11px] uppercase tracking-wider text-[#6B605B] font-medium">
+            <span className="block text-[11px] uppercase tracking-wider text-[#404A3D]/70 font-medium">
               Kunniyamuthur &bull; Coimbatore
             </span>
           </div>
@@ -36,7 +36,7 @@ export const Header: React.FC = () => {
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-medium text-[#5A4F4A] hover:text-[#B85D38] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#B85D38] hover:after:w-full after:transition-all"
+              className="text-sm font-medium text-[#404A3D] hover:text-[#5B8C51] transition-colors py-1 relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-[#5B8C51] hover:after:w-full after:transition-all"
             >
               {link.label}
             </a>
@@ -50,7 +50,7 @@ export const Header: React.FC = () => {
             href={BUSINESS_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3F7A59] hover:bg-[#2F5C43] text-white text-sm font-semibold tracking-wide shadow-xs transition-colors"
+            className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#5B8C51] hover:bg-[#4B7342] text-white text-sm font-semibold tracking-wide shadow-xs transition-colors"
           >
             <MessageCircle className="w-4 h-4 fill-white/20" />
             <span>Order on WhatsApp</span>
@@ -64,7 +64,7 @@ export const Header: React.FC = () => {
             href={BUSINESS_INFO.whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="p-2 rounded-lg bg-[#3F7A59] text-white"
+            className="p-2 rounded-lg bg-[#5B8C51] hover:bg-[#4B7342] text-white"
             aria-label="Order on WhatsApp"
           >
             <MessageCircle className="w-4 h-4" />
@@ -72,7 +72,7 @@ export const Header: React.FC = () => {
           <button
             id="mobile-menu-toggle-btn"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-2 rounded-lg text-[#3A302D] hover:bg-[#F3ECE4] transition-colors"
+            className="p-2 rounded-lg text-[#404A3D] hover:bg-[#EEEEEE] transition-colors"
             aria-label="Toggle navigation menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -83,27 +83,27 @@ export const Header: React.FC = () => {
 
       {/* Mobile Drawer Menu */}
       {mobileMenuOpen && (
-        <div id="mobile-nav-menu" className="md:hidden bg-[#FAF7F2] border-b border-[#E6DED8] px-4 pt-2 pb-5 space-y-3">
+        <div id="mobile-nav-menu" className="md:hidden bg-white border-b border-[#EEEEEE] px-4 pt-2 pb-5 space-y-3">
           <nav className="flex flex-col space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.label}
                 href={link.href}
                 onClick={() => setMobileMenuOpen(false)}
-                className="px-3 py-2 text-base font-medium text-[#2C2523] rounded-md hover:bg-[#F3ECE4] transition-colors"
+                className="px-3 py-2 text-base font-medium text-[#404A3D] rounded-md hover:bg-[#F7F7F7] transition-colors"
               >
                 {link.label}
               </a>
             ))}
           </nav>
-          <div className="pt-2 border-t border-[#E6DED8]">
+          <div className="pt-2 border-t border-[#EEEEEE]">
             <a
               id="mobile-drawer-whatsapp-btn"
               href={BUSINESS_INFO.whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setMobileMenuOpen(false)}
-              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#3F7A59] text-white text-base font-semibold shadow-xs"
+              className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-lg bg-[#5B8C51] hover:bg-[#4B7342] text-white text-base font-semibold shadow-xs"
             >
               <MessageCircle className="w-5 h-5" />
               <span>Order on WhatsApp</span>

@@ -10,7 +10,7 @@ export const FloatingWhatsApp: React.FC = () => {
         href={BUSINESS_INFO.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 px-4 py-3 rounded-full bg-[#3F7A59] text-white font-semibold text-sm shadow-lg active:scale-95 transition-transform border border-white/20"
+        className="flex items-center gap-2 px-4 py-3 rounded-full bg-[#5B8C51] hover:bg-[#4B7342] text-white font-semibold text-sm shadow-lg active:scale-95 transition-transform border border-white/20"
         aria-label="Order on WhatsApp"
       >
         <MessageCircle className="w-5 h-5 fill-white/20" />
