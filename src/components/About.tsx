@@ -1,12 +1,14 @@
 import React from 'react';
 import { Store, HeartHandshake, Milk } from 'lucide-react';
+import cowJersey from '../assets/images/cow-jersey.jpg';
+import cowCalf from '../assets/images/cow-calf.jpg';
 
 export const About: React.FC = () => {
   return (
     <section id="about" className="py-14 sm:py-18 bg-[#FAF7F2]">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div className="bg-white rounded-2xl p-6 sm:p-10 border border-[#E6DED8] shadow-xs space-y-6">
-          
+
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-[#F0E8E1] pb-5">
             <div>
               <span className="text-xs uppercase font-bold tracking-widest text-[#B85D38]">
@@ -22,20 +24,36 @@ export const About: React.FC = () => {
             </div>
           </div>
 
-          {/* 2-3 Sentences strictly adhering to provided facts */}
-          <div className="space-y-4 text-base sm:text-lg text-[#473E3A] leading-relaxed">
-            <p>
-              Queen Milk &amp; Milk Products is a dedicated neighbourhood dairy shop in Kunniyamuthur, Coimbatore, 
-              known locally for our traditional buffalo ghee simmered the authentic way.
-            </p>
-            <p>
-              We deliberately maintain a small, focused product range—fresh milk, curd, and buttermilk—brought in and 
-              sold fresh same-day so nothing sits as stored or frozen warehouse stock.
-            </p>
-            <p>
-              We are not a big commercial brand; we are a real, friendly counter you can walk into every day for genuine, 
-              unadulterated dairy you can trust for your family.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+            {/* Text column */}
+            <div className="lg:col-span-7 space-y-4 text-base sm:text-lg text-[#473E3A] leading-relaxed">
+              <p>
+                Queen Milk &amp; Milk Products is a dedicated neighbourhood dairy shop in Kunniyamuthur, Coimbatore,
+                known locally for our traditional buffalo ghee simmered the authentic way.
+              </p>
+              <p>
+                We deliberately maintain a small, focused product range—fresh milk, curd, and buttermilk—brought in and
+                sold fresh same-day so nothing sits as stored or frozen warehouse stock.
+              </p>
+              <p>
+                We are not a big commercial brand; we are a real, friendly counter you can walk into every day for genuine,
+                unadulterated dairy you can trust for your family.
+              </p>
+            </div>
+
+            {/* Image column: two stacked cow portraits, Milky-style accent imagery */}
+            <div className="lg:col-span-5 grid grid-cols-2 gap-3">
+              <img
+                src={cowJersey}
+                alt="Dairy cow at the source of our milk"
+                className="w-full h-40 sm:h-52 object-cover rounded-xl border border-[#E6DED8] mt-6"
+              />
+              <img
+                src={cowCalf}
+                alt="Young dairy calf"
+                className="w-full h-40 sm:h-52 object-cover rounded-xl border border-[#E6DED8]"
+              />
+            </div>
           </div>
 
           {/* Core values row */}

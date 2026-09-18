@@ -2,6 +2,7 @@
   "name": "Queen Milk & Milk Products",
   "description": "Local neighbourhood dairy shop in Kunniyamuthur, Coimbatore known for traditional buffalo ghee, fresh milk, curd, and buttermilk.",
   "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
 }
-

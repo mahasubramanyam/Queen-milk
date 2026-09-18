@@ -1,7 +1,17 @@
 import React from 'react';
 import { MessageCircle, Award } from 'lucide-react';
 import { PRODUCTS, BUSINESS_INFO } from '../data';
-import { PlaceholderImage } from './PlaceholderImage';
+import gheeImg from '../assets/images/ghee.jpg';
+import milkImg from '../assets/images/milk-bottles.jpg';
+import curdImg from '../assets/images/paneer.jpg';
+import buttermilkImg from '../assets/images/butter.jpg';
+
+const PRODUCT_IMAGES: Record<string, string> = {
+  'buffalo-ghee': gheeImg,
+  'fresh-milk': milkImg,
+  curd: curdImg,
+  buttermilk: buttermilkImg,
+};
 
 export const ProductsGrid: React.FC = () => {
   return (
@@ -48,17 +58,15 @@ export const ProductsGrid: React.FC = () => {
                 )}
 
                 <div className="space-y-4">
-                  {/* Structured Image Placeholder - No Stock Photos */}
-                  {/* <!-- replace-with-${product.id}-photo --> */}
+                  {/* Product Photo */}
                   <div className="w-full pt-1">
-                    <PlaceholderImage
-                      id={`placeholder-${product.id}`}
-                      label={`[replace with ${product.name.toLowerCase()} photo]`}
-                      altKey={product.placeholderAlt}
-                      aspectRatio="aspect-[4/3]"
-                      icon={product.iconType}
-                      variant={isSignature ? 'clay' : 'cream'}
-                      hintSize="Product photo (approx. 500×375px)"
+                    <img
+                      id={`product-photo-${product.id}`}
+                      src={PRODUCT_IMAGES[product.id]}
+                      alt={product.name}
+                      className={`w-full aspect-[4/3] object-cover rounded-xl border ${
+                        isSignature ? 'border-[#D99A82]' : 'border-[#E6DED8]'
+                      }`}
                     />
                   </div>
 
